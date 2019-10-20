@@ -10,7 +10,7 @@ function project_post_type() {
 		'name_admin_bar'        => __( 'project', 'text_domain' ),
 		'archives'              => __( 'Archivos de proyectos', 'text_domain' ),
 		'attributes'            => __( 'Atributos del proyecto', 'text_domain' ),
-		'parent_item_colon'     => __( 'Proyecto principal', 'text_domain' ),
+		'parent_item_colon'     => __( 'Proyecto principal:', 'text_domain' ),
 		'all_items'             => __( 'Todos los proyectos', 'text_domain' ),
 		'add_new_item'          => __( 'Agrega un nuevo proyecto', 'text_domain' ),
 		'add_new'               => __( 'Añadir nuevo', 'text_domain' ),
@@ -18,7 +18,7 @@ function project_post_type() {
 		'edit_item'             => __( 'Editar proyecto', 'text_domain' ),
 		'update_item'           => __( 'Actualizar proyecto', 'text_domain' ),
 		'view_item'             => __( 'Ver proyecto', 'text_domain' ),
-		'view_items'            => __( 'Ver proyecto', 'text_domain' ),
+		'view_items'            => __( 'ver proyectos', 'text_domain' ),
 		'search_items'          => __( 'Buscar proyecto', 'text_domain' ),
 		'not_found'             => __( 'No encontrado', 'text_domain' ),
 		'not_found_in_trash'    => __( 'No encontrado en la papelera', 'text_domain' ),
@@ -37,6 +37,7 @@ function project_post_type() {
 		'description'           => __( 'Imágenes página proyectos', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'thumbnail' ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -56,4 +57,4 @@ function project_post_type() {
 }
 add_action( 'init', 'project_post_type', 0 );
 
-?>
+ ?>

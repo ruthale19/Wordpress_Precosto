@@ -22,8 +22,35 @@
 				</div>
 			</div>
 
-			<div class="row gallery" id="gallery">
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 2">
+				<?php $arg = array(
+				 'post_type'		 => 'project',
+				 'category_name'	 => '',
+				 'posts_per_page' => -1
+				 );
+
+				 $get_arg = new WP_Query( $arg );
+
+				 while ( $get_arg->have_posts() ) {
+				 $get_arg->the_post();
+				 ?>
+
+				 <!-- Content -->
+				 <div class="row gallery" id="gallery">
+
+
+				 <?php
+				 if(trim(get_the_title()) == 'construccion')?>{
+					 <div class="col-lg-4 col-md-6 col-xs-12 gallery__img 1">
+				 }
+
+
+				 <div class="proyect__block" data-wow-duration="1s" data-wow-delay="0.5s">
+					 <div class="proyect__works-thumb" id="work-1"></div>
+					 <div class="proyect__works-caption"><?php the_title(); ?></div>
+				 </div>
+				 <?php } wp_reset_postdata(); ?>
+
+
 					<div class="proyect__block" data-wow-duration="1s" data-wow-delay="0.5s">
 						<div class="proyect__works-thumb" id="work-1"></div>
 						<div class="proyect__works-caption">Remodelación</div>
