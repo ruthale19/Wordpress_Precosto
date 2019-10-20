@@ -1,0 +1,36 @@
+/* layout header*/
+
+header {
+  padding-top: 80px;
+}
+
+.header__container {
+  @extend %heading;
+  padding-bottom: 2rem;
+}
+
+.header__img {
+  height: 400px;
+}
+
+.header__logo {
+  padding: 2rem 0;
+  width: 150px;
+  display: flex;
+  margin: 0 auto;
+  animation: logo 4s;
+}
+
+.header__text1 {
+  font-size: $large;
+  animation: logo 4s;
+}
+
+
+@keyframes logo {
+  0% { opacity: 0; }
+}
+
+.header__single {
+  padding-top: 0;
+}

@@ -1,0 +1,67 @@
+/* layout service */
+
+.service__container {
+  padding: 7em 0.5em 3em 1em;
+  text-align: center;
+}
+
+.service__container2 {
+  padding: 2rem 0;
+  text-align: center;
+  font-weight: $bold;
+}
+
+.service {
+
+  &__text1 {
+    font-size: $x-large;
+    padding-bottom: 2em;
+  }
+
+  &__text2 {
+    text-align: justify;
+  }
+
+
+  &__img {
+    padding-top: 1em;
+    width: 5em;
+    display: flex;
+    margin: 0 auto;
+  }
+
+
+  &__btn {
+    @include botones;
+    color: $white;
+  }
+
+  &__btn:hover {
+    color: $white;
+    background-color: $gray-main;
+    border-color: $gray-main;
+  }
+
+}
+
+.btn-color {
+  @include botones;
+}
+
+.btn-color:hover {
+  color: $white;
+  background-color: $gray-main;
+  border-color: $gray-main;
+}
+
+
+/* 48em = 768px */
+
+@media (min-width: 768px) {
+  .service {
+
+    &__text1 {
+      font-size: $xx-large;
+    }
+  }
+}
