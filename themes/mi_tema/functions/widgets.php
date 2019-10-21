@@ -35,6 +35,14 @@ function dl_widget_init() {
 		'after_title'	=> '',
 	));
 
+	register_sidebar( array(
+		 'name'			=> 'Footer',
+		 'id'			=> 'footer-widget',
+		 'before_widget'	=> '',
+		 'after_widget'	=> '',
+		 'before_title'	=> '',
+		 'after_title'	=> '',
+	));
 }
 
 add_action( 'widgets_init', 'dl_widget_init' );

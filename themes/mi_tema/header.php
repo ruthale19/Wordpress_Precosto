@@ -9,4 +9,4 @@
 </head>
 <body>
 
-	<?php get_template_part('_includes/nav', 'bootstrap4') ?>
+	<?php get_template_part('_includes/nav', 'principal') ?>

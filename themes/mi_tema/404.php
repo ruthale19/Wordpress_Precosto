@@ -4,7 +4,7 @@
 	<header class="header" id="home">
 		<div class="header__container">
 			<?php get_template_part('_includes/header', 'logo') ?>
-			<h3 class="header__text1">Experiencia a su alcance</h3>
+			<h3 class="header__text1"><?php echo get_bloginfo('description') ?></h3>
 		</div>
 	</header>
 

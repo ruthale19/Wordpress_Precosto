@@ -24,7 +24,7 @@
 		</div>
 		<div class="header__container">
 			<img src="<?php echo get_theme_file_uri() ?>/assets/images/logo_edificio.png" alt="logo_edificio" class="text-center header__logo">
-			<h3 class="header__text1">Experiencia a su alcance</h3>
+			<h3 class="header__text1"><?php echo get_bloginfo('description') ?></h3>
 		</div>
 	</header>
 
