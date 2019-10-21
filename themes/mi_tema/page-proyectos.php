@@ -14,13 +14,15 @@
 			<h1 class="proyect__text1">Nuestros Proyectos</h1>
 			<div class="row d-flex justify-content-center">
 				<div class="col-md-12 mt-3">
-					<button type="button" class="btn btn-outline-info mx-2 waves-effect btn-menu mb-2 all" data-filter="all">Todos</button>
-					<button type="button" class="btn btn-outline-info mx-2 waves-effect btn-menu mb-2 1" data-filter="1">Construcción</button>
-					<button type="button" class="btn btn-outline-info mx-2 waves-effect btn-menu mb-2 2" data-filter="2">Remodelación</button>
-					<button type="button" class="btn btn-outline-info mx-2 waves-effect btn-menu mb-2 3" data-filter="3">Mantenimiento</button>
-					<button type="button" class="btn btn-outline-info mx-2 waves-effect btn-menu mb-2 4" data-filter="4">Estructuras Metálicas</button>
+					<button type="button" class="btn btn-outline color mx-2 waves-effect btn-menu mb-2 all" data-filter="all">Todos</button>
+					<button type="button" class="btn btn-outline color mx-2 waves-effect btn-menu mb-2 1" data-filter="1">Construcción</button>
+					<button type="button" class="btn btn-outline color mx-2 waves-effect btn-menu mb-2 2" data-filter="2">Remodelación</button>
+					<button type="button" class="btn btn-outline color mx-2 waves-effect btn-menu mb-2 3" data-filter="3">Mantención</button>
+					<button type="button" class="btn btn-outline color mx-2 waves-effect btn-menu mb-2 4" data-filter="4">Estructuras Metálicas</button>
 				</div>
 			</div>
+
+			<div class="row gallery" id="gallery">
 
 				<?php $arg = array(
 				 'post_type'		 => 'project',
@@ -35,149 +37,58 @@
 				 ?>
 
 				 <!-- Content -->
-				 <div class="row gallery" id="gallery">
-
 
 				 <?php
-				 if(trim(get_the_title()) == 'construccion')?>{
-					 <div class="col-lg-4 col-md-6 col-xs-12 gallery__img 1">
-				 }
+						if ( has_category('construccion')) {
+						// code...
+					 			echo '<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 1">' ;
+								echo '<div class="proyect__block">';
+		 						 the_post_thumbnail('projects', array('class' => 'image w-100 proyect__works-thumb'));
+		 						echo '<div class="proyect__works-caption">';
+								the_title();
+		 					  echo '</div>';
+		 				    echo '</div>';
+								echo '</div>';
 
+						} else if ( has_category('remodelacion')) {
+						// code...
+								echo '<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 2">' ;
+								echo '<div class="proyect__block">';
+								 the_post_thumbnail('projects', array('class' => 'image w-100 proyect__works-thumb'));
+								echo '<div class="proyect__works-caption">';
+								the_title();
+								echo '</div>';
+								echo '</div>';
+								echo '</div>';
 
-				 <div class="proyect__block" data-wow-duration="1s" data-wow-delay="0.5s">
-					 <div class="proyect__works-thumb" id="work-1"></div>
-					 <div class="proyect__works-caption"><?php the_title(); ?></div>
-				 </div>
+					} else if ( has_category('mantencion')) {
+					// code...
+								echo '<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 3">' ;
+								echo '<div class="proyect__block">';
+								 the_post_thumbnail('projects', array('class' => 'image w-100 proyect__works-thumb'));
+								echo '<div class="proyect__works-caption">';
+								the_title();
+								echo '</div>';
+								echo '</div>';
+								echo '</div>';
+
+				} else {
+				// code...
+								echo '<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 4">' ;
+								echo '<div class="proyect__block">';
+								the_post_thumbnail('projects', array('class' => 'image w-100 proyect__works-thumb'));
+								echo '<div class="proyect__works-caption">';
+							  the_title();
+								echo '</div>';
+								echo '</div>';
+								echo '</div>';
+				}
+				 ?>
+
 				 <?php } wp_reset_postdata(); ?>
 
-
-					<div class="proyect__block" data-wow-duration="1s" data-wow-delay="0.5s">
-						<div class="proyect__works-thumb" id="work-1"></div>
-						<div class="proyect__works-caption">Remodelación</div>
 					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 2">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1s">
-						<div class="proyect__works-thumb" id="work-2"></div>
-						<div class="proyect__works-caption">Remodelación</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 1">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1.5s">
-						<div class="proyect__works-thumb" id="work-3"></div>
-						<div class="proyect__works-caption">Construcción</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 1">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1.5s">
-						<div class="proyect__works-thumb" id="work-4"></div>
-						<div class="proyect__works-caption">Construcción</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 4">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1s">
-						<div class="proyect__works-thumb" id="work-5"></div>
-						<div class="proyect__works-caption">Estructura Metálica</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 3">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="0.5s">
-						<div class="proyect__works-thumb" id="work-6"></div>
-						<div class="proyect__works-caption">Mantenimiento</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 2">
-					<div class="proyect__block" data-wow-duration="1s" data-wow-delay="0.5s">
-						<div class="proyect__works-thumb" id="work-7"></div>
-						<div class="proyect__works-caption">Remodelación</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 2">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1s">
-						<div class="proyect__works-thumb" id="work-8"></div>
-						<div class="proyect__works-caption">Remodelación</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 1">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1.5s">
-						<div class="proyect__works-thumb" id="work-9"></div>
-						<div class="proyect__works-caption">Construcción</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 4">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1.5s">
-						<div class="proyect__works-thumb" id="work-10"></div>
-						<div class="proyect__works-caption">Estructura Metálica</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 2">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1s">
-						<div class="proyect__works-thumb" id="work-11"></div>
-						<div class="proyect__works-caption">Remodelación</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 3">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="0.5s">
-						<div class="proyect__works-thumb" id="work-12"></div>
-						<div class="proyect__works-caption">Mantenimiento</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 4">
-					<div class="proyect__block" data-wow-duration="1s" data-wow-delay="0.5s">
-						<div class="proyect__works-thumb" id="work-13"></div>
-						<div class="proyect__works-caption">Estructura Metálica</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 2">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1s">
-						<div class="proyect__works-thumb" id="work-14"></div>
-						<div class="proyect__works-caption">Remodelación</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 2">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1.5s">
-						<div class="proyect__works-thumb" id="work-15"></div>
-						<div class="proyect__works-caption">Remodelación</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 4">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1.5s">
-						<div class="proyect__works-thumb" id="work-16"></div>
-						<div class="proyect__works-caption">Estructura Metálica</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 2">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1s">
-						<div class="proyect__works-thumb" id="work-17"></div>
-						<div class="proyect__works-caption">Remodelación</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 4">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="0.5s">
-						<div class="proyect__works-thumb" id="work-18"></div>
-						<div class="proyect__works-caption">Estructura Metálica</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 4">
-					<div class="proyect__block" data-wow-duration="1s" data-wow-delay="0.5s">
-						<div class="proyect__works-thumb" id="work-19"></div>
-						<div class="proyect__works-caption">Estructura Metálica</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 3">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1s">
-						<div class="proyect__works-thumb" id="work-20"></div>
-						<div class="proyect__works-caption">Mantenimiento</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 4">
-					<div class="proyect__block" data-wow-duration=".8s" data-wow-delay="1.5s">
-						<div class="proyect__works-thumb" id="work-21"></div>
-						<div class="proyect__works-caption">Estructura Metálica</div>
-					</div>
-				</div>
 			</div>
-		</div>
 	</section>
 
 
