@@ -9,9 +9,10 @@
 	</header>
 
 	<!-- Nosotros -->
-	<?php the_post() ?>
+
 	<section class="us" id="us">
 		<div class="container us__container">
+			<?php the_post() ?>
 			<h1 class="us__text1"><?php the_title(); ?></h1>
 			<p class="us_text2"><?php the_content(); ?></p>
 
