@@ -36,7 +36,7 @@ function service_post_type() {
 		'label'                 => __( 'Service', 'text_domain' ),
 		'description'           => __( 'Post dedicado a servicios', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor' ),
+		'supports'              => array( 'title', 'editor', 'thumbnail' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,

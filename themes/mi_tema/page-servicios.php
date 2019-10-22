@@ -13,6 +13,46 @@
   <div class="container service__container2">
     <h1 class="service__text1">Servicios</h1>
     <div class="card-deck">
+
+      var $i = 0;
+
+    <?php $arg = array(
+     'post_type'     => 'service',
+     'category_name'   => '',
+     'posts_per_page' => -1,
+     'offset'     => 0,
+     'post__not_in'   => array($post->ID),
+     'paged'       => $paged
+     );
+
+     $get_arg = new WP_Query( $arg );
+
+     while ( $get_arg->have_posts() ) {
+     $get_arg->the_post();
+     ?>
+
+     <!-- Content -->
+     <div id="cardService" class="card mb-4 wow animated flipInY" data-wow-duration="3s" data-wow-delay=i>
+
+       if(i==0){
+
+       }
+       <?php get_template_part('_includes/service', 'construccion') ?>
+       <div class="card-body">
+         <h5 class="card-title mb-5">Construcción</h5>
+         <p class="card-text service__text2">Elaboramos su Proyecto, desde el diseño hasta la entrega de la obra terminada.</p>
+       </div>
+     </div>
+
+
+
+     <?php } wp_reset_postdata(); ?>
+
+
+
+
+
+
       <div id="cardService" class="card mb-4 wow animated flipInY" data-wow-duration="3s" data-wow-delay="0">
         <?php get_template_part('_includes/service', 'construccion') ?>
         <div class="card-body">
