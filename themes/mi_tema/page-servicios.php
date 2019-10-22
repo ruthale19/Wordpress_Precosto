@@ -63,14 +63,11 @@
 
     </div>
 
-    <div class="card-deck us__card mt-0">
-      <div class="card card-border mb-4 mx-0">
-        <h4 class="us__title">Cómo trabajamos</h4>
-        <div class="card-body us__body">
-          <p class="card-text">zsxdcfvgbuhjmk,l</p>
+
+        <h4 class="service__card">Cómo trabajamos</h4>
+        <div class="service__img2 text-center mb-5">
+          <?php get_template_part('_includes/logo', 'proceso') ?>
         </div>
-      </div>
-    </div>
 
   </div>
 </section>

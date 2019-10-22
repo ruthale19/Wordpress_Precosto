@@ -387,6 +387,14 @@ footer ul {
   display: flex;
   margin: 0 auto;
 }
+.service__img2 {
+  width: 80%;
+  margin: 0 auto;
+}
+.service__card {
+  padding: 4rem 0;
+  border-width: 0;
+}
 .service__btn {
   -webkit-background-color: #057EB3;
   -moz-background-color: #057EB3;
@@ -439,6 +447,11 @@ footer ul {
 @media (min-width: 768px) {
   .service__text1 {
     font-size: 35px;
+  }
+
+  .service__img2 {
+    width: 50%;
+    margin: 0 auto;
   }
 }
 /* layout proyect */
@@ -691,14 +704,14 @@ footer ul {
 }
 
 .us__text1 {
-  font-size: 25px;
+  font-size: 23px;
   text-align: center;
   padding: 3rem 0;
 }
 
-.us_text2 {
+.us__text2 {
   line-height: 50px;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .us__container {
@@ -724,6 +737,12 @@ footer ul {
   .us__text1 {
     font-size: 35px;
   }
+
+  .us__text2 {
+    line-height: 50px;
+    font-size: 18px;
+  }
+
 }
 /* layout contact */
 .contact__text1 {
