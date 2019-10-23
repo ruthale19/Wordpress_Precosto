@@ -848,6 +848,10 @@ footer ul {
   }
 }
 
+  .single-project__image {
+    width: 1000px;
+    height: 400px;
+  }
 
 
 

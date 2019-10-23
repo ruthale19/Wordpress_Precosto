@@ -16,6 +16,7 @@ function dl_image_sizes( $sizes ) {
 		'custom_service'	=> __( 'Tamaño personalizado de img service' ),
 		'projects'	=> __( 'Tamaño personalizado de img proyectos' ),
 		'custom_map'	=> __( 'Tamaño personalizado del mapa' ),
+		'custom_single'	=> __( 'Tamaño personalizado del post' )
 	);
 
 	return array_merge( $sizes, $add_sizes );
@@ -40,6 +41,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_image_size( 'custom_service', 80, 96, true );		// Personalización del tamaño de img service
 	add_image_size( 'projects', 360, 240, true );		// Personalización del tamaño de img proyect
 	add_image_size( 'custom_map', 400, 300, true );		// Personalización del tamaño de map
+	add_image_size( 'custom_single', 1000, 400, true );		// Personalización del tamaño de post
 
 	add_filter( 'image_size_names_choose', 'dl_image_sizes' );
 
