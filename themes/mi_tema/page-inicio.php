@@ -84,7 +84,7 @@
 
 						 <?php
 						 		if(has_category('estructura-metalica')){
-									echo '<h5 class="card-title mb-4">';
+									echo '<h5 class="card-title margin__title">';
 									the_title();
 									echo '</h5>';
 								}
