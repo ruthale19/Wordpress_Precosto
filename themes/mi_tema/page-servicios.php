@@ -1,5 +1,8 @@
 <?php get_header() ?>
 
+<?php get_template_part('_includes/nav', 'principal') ?>
+
+
 <!-- header -->
 <header class="header" id="home">
   <div class="header__container">
@@ -15,7 +18,7 @@
     <div class="card-deck">
 
     <?php $arg = array(
-     'post_type'     => 'service',
+     'post_type'     => 'post',
      'category_name'   => '',
      'posts_per_page' => -1,
      'offset'     => 0,
@@ -54,8 +57,23 @@
 
        ?>
        <div class="card-body">
-         <h5 class="card-title mb-5"><?php the_title(); ?></h5>
-         <p class="card-text service__text2"><?php the_content(); ?></p>
+
+         <?php
+            if(has_category('estructura-metalica')){
+              echo '<h5 class="card-title mb-4">';
+              the_title();
+              echo '</h5>';
+            }
+
+            else {
+              echo '<h5 class="card-title mb-5">';
+              the_title();
+              echo '</h5>';
+            }
+         ?>
+         
+         <p class="card-text service__text2"><?php the_excerpt(); ?></p>
+         	<a href="<?php the_permalink(); ?>" class="btn service__btn">Conocer más</a>
        </div>
      </div>
 

@@ -805,6 +805,14 @@ footer ul {
   background-color: #58595b;
 }
 
+@media (max-width: 768px) {
+  .single__text1 {
+    font-size: 25px;
+  }
+  .single__text2 {
+    font-size: 15px;
+  }
+
 /*
  *
  * Esta carpeta fue creada para componentes o módulos pequeños como por ejemplo:

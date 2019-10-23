@@ -1,5 +1,8 @@
 <?php get_header() ?>
 
+<?php get_template_part('_includes/nav', 'principal') ?>
+
+
 <header class="header" id="home">
 		<div id="carouselHeader" class="carousel slide carousel-fade d-none d-lg-block" data-ride="carousel">
 			<div class="carousel-inner">
@@ -39,7 +42,7 @@
 	    <h1 class="service__text1">Servicios</h1>
 	    <div class="card-deck">
 				<?php $arg = array(
-		     'post_type'     => 'service',
+		     'post_type'     => 'post',
 		     'category_name'   => '',
 		     'posts_per_page' => -1,
 		     'offset'     => 0,
@@ -78,8 +81,22 @@
 
 		       ?>
 		       <div class="card-body">
-		         <h5 class="card-title mb-5"><?php the_title(); ?></h5>
-		         <p class="card-text service__text2"><?php the_content(); ?></p>
+
+						 <?php
+						 		if(has_category('estructura-metalica')){
+									echo '<h5 class="card-title mb-4">';
+									the_title();
+									echo '</h5>';
+								}
+
+								else {
+									echo '<h5 class="card-title mb-5">';
+									the_title();
+									echo '</h5>';
+								}
+						 ?>
+
+		         <p class="card-text service__text2"><?php the_excerpt(); ?></p>
 		       </div>
 		     </div>
 

@@ -1,5 +1,8 @@
 <?php get_header() ?>
 
+<?php get_template_part('_includes/nav', 'principal') ?>
+
+
 <!-- header -->
 	<header class="header" id="home">
 		<div class="header__container">

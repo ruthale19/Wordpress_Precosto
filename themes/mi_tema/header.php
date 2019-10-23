@@ -8,5 +8,3 @@
 	<?php wp_head() ?>
 </head>
 <body>
-
-	<?php get_template_part('_includes/nav', 'principal') ?>
