@@ -14,7 +14,8 @@
 
 			<section class="mb-5">
 				<div class="container px-5">
-					<a href="servicios" class="btn btn-color btn-sm mt-5">Volver a servicios <i class="fas fa-hard-hat"></i></a>
+					<a href="<?php echo home_url(); ?>" class="btn btn-color btn-letter btn-sm mt-5 mr-2">Volver a <i class="fas fa-home"></i></a>
+					<a href="servicios" class="btn btn-color btn-letter btn-sm mt-5">Volver a servicios <i class="fas fa-hard-hat"></i></a>
 					<div class="container__margin">
 						<h2 class="text-center p-5 single__text1"><?php the_title() ?></h2>
 						<div class="px-5 single__text2 text-justify">

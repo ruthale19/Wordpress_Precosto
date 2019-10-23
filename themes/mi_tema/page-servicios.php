@@ -73,7 +73,7 @@
          ?>
 
          <p class="card-text service__text2"><?php the_excerpt(); ?></p>
-         	<a href="<?php the_permalink(); ?>" class="btn service__btn">Conocer más</a>
+         <a href="<?php the_permalink(); ?>" class="btn service__btn">Conocer más</a>
        </div>
      </div>
 
