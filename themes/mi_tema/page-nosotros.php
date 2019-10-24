@@ -21,8 +21,6 @@
 			<div class="us__text2">
 						<?php the_content() ?>
 			</div>
-
-
 			<div class="card-deck us__card mb-0">
 				<div class="card card-border mb-4 ml-0">
 					<h4 class="us__title">Nuestra Misión</h4>

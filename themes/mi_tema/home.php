@@ -73,7 +73,6 @@
 	</section>
 
 	<!-- Proyectos -->
-
 	<section class="proyect" id="proyects">
 		<div class="container proyect__container">
 			<h1 class="proyect__text1">Nuestros Proyectos</h1>
