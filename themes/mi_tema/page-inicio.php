@@ -2,7 +2,6 @@
 
 <?php get_template_part('_includes/nav', 'principal') ?>
 
-
 <header class="header" id="home">
 		<div id="carouselHeader" class="carousel slide carousel-fade d-none d-lg-block" data-ride="carousel">
 			<div class="carousel-inner">
