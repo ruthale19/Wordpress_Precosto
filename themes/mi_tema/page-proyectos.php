@@ -43,7 +43,7 @@
 
 				 <?php
 						if ( has_category('construccion')) {
-						// code...
+						    // code...
 					 			echo '<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 1">' ;
 								echo '<a href="';
 								the_permalink();
@@ -58,7 +58,7 @@
 								echo '</div>';
 
 						} else if ( has_category('remodelacion')) {
-						// code...
+						    // code...
 								echo '<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 2">' ;
 								echo '<a href="';
 								the_permalink();
@@ -72,8 +72,8 @@
 								echo '</a>';
 								echo '</div>';
 
-					} else if ( has_category('mantencion')) {
-					// code...
+						} else if ( has_category('mantencion')) {
+					      // code...
 								echo '<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 3">' ;
 								echo '<a href="';
 								the_permalink();
@@ -87,8 +87,8 @@
 								echo '</a>';
 								echo '</div>';
 
-				} else {
-				// code...
+				     } else {
+				        // code...
 								echo '<div class="col-lg-4 col-md-6 col-xs-12 gallery__img 4">' ;
 								echo '<a href="';
 								the_permalink();
