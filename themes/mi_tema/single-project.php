@@ -8,6 +8,7 @@
 		</div>
 	</header>
 
+<!-- post_type -->
 	<?php if ( $post_type == 'project' ) { ?>
 
 		<div class="container px-5">
