@@ -853,11 +853,12 @@ footer ul {
     height: 400px;
   }
 
-
-
-
-
 @media only screen and (max-width : 768px) {
+
+  .single-project__text1 {
+    font-size: 23px;
+  }
+
  .animated {
    /*CSS transitions*/
    -o-transition-property: none !important;
